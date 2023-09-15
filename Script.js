@@ -38,6 +38,7 @@ function rolldie1() {
   if (add1 >= 30) {
     button1.disabled = true;
     button2.disabled = true;
+    reset.disabled = false;
     const win = document.getElementById("h1");
     win.innerHTML = "🎉Congratulations Player 1!🎉You're the winner!🏆";
   }
@@ -55,6 +56,7 @@ function rolldie2() {
   if (add2 >= 30) {
     button1.disabled = true;
     button2.disabled = true;
+    reset.disabled = false;
     const win = document.getElementById("h1");
     win.innerHTML = "🎉Congratulations Player 2!🎉You're the winner!🏆";
   }
@@ -69,6 +71,7 @@ reset.addEventListener("click", () => {
   } else {
     button2.disabled = false;
   }
+  reset.disabled = true
   if (button1.disabled == false) {
     document.getElementById("h1").innerHTML = "Player 1 to Play";
   } else {
